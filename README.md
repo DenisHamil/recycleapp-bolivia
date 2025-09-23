@@ -1,61 +1,271 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <img src="https://laravel.com/img/logotype.min.svg" alt="Laravel" width="300">
+  <h1>♻️ RecycleApp Bolivia</h1>
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<div align="center">
 
-## About Laravel
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)  
+![PHP](https://img.shields.io/badge/PHP-%3E=8.1-blue)  
+![Laravel](https://img.shields.io/badge/Laravel-10.x-red)  
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📌 About RecycleApp
 
-## Learning Laravel
+**RecycleApp Bolivia** es una plataforma desarrollada en **Laravel 10** que conecta **donadores** y **recolectores** de materiales reciclables.  
+Permite gestionar donaciones, historial de recolecciones, recompensas y notificaciones, fomentando la economía circular y el reciclaje responsable.  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Entre sus características principales:  
+- ✅ Gestión de usuarios: donadores (familias/organizaciones) y recolectores.  
+- ✅ Sistema de recompensas y puntos canjeables.  
+- ✅ Notificaciones en tiempo real.  
+- ✅ Historial detallado de donaciones y recolecciones.  
+- ✅ Integración con mapas (*Leaflet*) para geolocalización.  
+- ✅ Dashboard diferenciado para cada rol (donador, recolector, administrador).  
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚡ Requirements
 
-## Laravel Sponsors
+Para ejecutar el proyecto necesitas:  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- PHP >= 8.1  
+- Composer  
+- Node.js >= 16 y NPM  
+- MySQL >= 5.7  
+- Extensiones PHP: `pdo`, `mbstring`, `openssl`, `tokenizer`, `xml`, `ctype`, `json`  
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🚀 Installation
 
-## Contributing
+1️⃣ **Clonar el repositorio**  
+```bash
+git clone https://github.com/DenisHamil/recycleapp-bolivia.git
+cd recycleapp-bolivia
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2️⃣ **Instalar dependencias**
+```bash
+composer install
+npm install && npm run build
+```
 
-## Code of Conduct
+3️⃣ **Configurar variables de entorno**
+```bash
+cp .env.example .env
+```
+Editar el archivo `.env` y colocar tus credenciales:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```env
+APP_NAME=RecycleApp
+APP_ENV=production
+APP_KEY=
+APP_DEBUG=false
+APP_URL=https://tusitio.com
 
-## Security Vulnerabilities
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_db
+DB_USERNAME=usuario_db
+DB_PASSWORD=contraseña_db
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=recycleapp.bo@gmail.com
+MAIL_PASSWORD= ← (aquí colocar la contraseña de la empresa)
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=recycleapp.bo@gmail.com
+MAIL_FROM_NAME="RecycleApp Bolivia"
+```
 
-## License
+Generar la clave de aplicación:
+```bash
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4️⃣ **Migraciones y Seeders**
+```bash
+php artisan migrate --seed
+```
+
+---
+
+## 👤 Crear Administrador
+
+Existen dos formas de crear el primer administrador:
+
+### 🔹 Opción 1: Usando Artisan Tinker (recomendado en Hostinger)
+En la consola del servidor ejecuta:
+
+```bash
+php artisan tinker
+```
+
+Y luego pega esto:
+
+```php
+$user = new \App\Models\User();
+$user->id = \Illuminate\Support\Str::uuid();
+$user->first_name = 'Admin';
+$user->last_name = 'Principal';
+$user->email = 'admin@recycleapp.com';
+$user->password = bcrypt('admin123');
+$user->role = 'admin';
+$user->status = 'active';
+$user->save();
+```
+
+👉 Ahora puedes iniciar sesión con:
+```
+Email: admin@recycleapp.com
+Contraseña: admin123
+```
+
+### 🔹 Opción 2: Crear un Seeder (si prefieres)
+Crea un archivo `database/seeders/AdminSeeder.php` con este contenido:
+
+```php
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+
+class AdminSeeder extends Seeder
+{
+    public function run(): void
+    {
+        User::updateOrCreate(
+            ['email' => 'admin@recycleapp.com'],
+            [
+                'id' => (string) Str::uuid(),
+                'first_name' => 'Admin',
+                'last_name' => 'Principal',
+                'password' => Hash::make('admin123'),
+                'role' => 'admin',
+                'status' => 'active',
+            ]
+        );
+    }
+}
+```
+
+Y lo ejecutas con:
+```bash
+php artisan db:seed --class=AdminSeeder
+```
+
+---
+
+## 📦 Deployment on Hostinger
+
+1. **Conectar tu cuenta Hostinger con el repositorio.**
+
+2. **Ejecutar en el servidor:**
+   ```bash
+   composer install --optimize-autoloader --no-dev
+   npm install && npm run build
+   ```
+
+3. **⚙️ Configuración de Base de Datos en Hostinger**
+
+   3.1. Crear base de datos en el panel de Hostinger (MySQL).  
+   
+   3.2. Configurar las credenciales en el archivo `.env`:  
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=mysql.hostinger.com
+   DB_PORT=3306
+   DB_DATABASE=recycleapp
+   DB_USERNAME=recycle_user
+   DB_PASSWORD=contraseña_segura
+   ```
+
+   3.3. Ejecutar las migraciones y seeders en el servidor:
+   ```bash
+   php artisan migrate --seed
+   ```
+
+   3.4. (Opcional) Crear un administrador con **Tinker** si no usaste el seeder:
+   ```bash
+   php artisan tinker
+   ```
+   
+   Y luego ejecutar:
+   ```php
+   $user = new \App\Models\User();
+   $user->id = \Illuminate\Support\Str::uuid();
+   $user->first_name = 'Admin';
+   $user->last_name = 'Principal';
+   $user->email = 'admin@recycleapp.com';
+   $user->password = bcrypt('admin123');
+   $user->role = 'admin';
+   $user->status = 'active';
+   $user->save();
+   ```
+
+4. **Crear symlink para storage y optimizar cachés:**
+   ```bash
+   php artisan storage:link
+   php artisan config:cache
+   php artisan route:cache
+   ```
+
+5. **Configurar el dominio en Hostinger para apuntar a la carpeta `public/`.**
+
+---
+
+## 🛠 Useful Commands
+
+```bash
+# Migrar desde cero y cargar seeders
+php artisan migrate:fresh --seed
+
+# Limpiar cachés
+php artisan config:clear
+php artisan route:clear
+php artisan cache:clear
+
+# Ingresar al Tinker
+php artisan tinker
+```
+
+---
+
+## 📚 Technologies
+
+<div align="center">
+
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+</div>
+
+- **Laravel 10**
+- **MySQL**
+- **Bootstrap 5**
+- **Leaflet Maps**
+- **Blade Templates**
+
+---
+
+## 📄 License
+
+Este proyecto está licenciado bajo MIT.
+
+<div align="center">
+  <strong>Desarrollado con ❤️ en Bolivia 🇧🇴</strong>
+</div>
