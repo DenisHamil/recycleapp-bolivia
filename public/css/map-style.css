@@ -1,0 +1,17 @@
+/* map-style.css */
+
+#map {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    background-color: #f9fff9;
+    border: 1px solid #dee2e6;
+}
+
+.list-group-item span {
+    display: inline-block;
+    border: 1px solid #ccc;
+}

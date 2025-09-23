@@ -1,0 +1,134 @@
+/* === PALETA DE COLORES === */
+:root {
+    --verde-principal: #2e7d32;
+    --verde-claro: #a5d6a7;
+    --verde-degradado-inicio: #b2dfdb;
+    --verde-degradado-fin: #dcedc8;
+    --verde-card: #e8f5e9;
+    --verde-card-suave: #e0f2f1;
+    --verde-oscuro: #27692b;
+    --azul-reciclaje: #0288d1;
+    --gris-texto: #1b1b1b;
+}
+
+/* === BODY CON DEGRADADO DE FONDO === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, var(--verde-degradado-inicio), var(--verde-degradado-fin));
+    color: var(--gris-texto);
+}
+
+/* === HERO DE LA LANDING === */
+.landing-hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.landing-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gris-texto);
+}
+
+.landing-hero p {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.landing-hero .btn {
+    margin: 0 10px;
+}
+
+/* === TARJETAS DE CONTENIDO === */
+.landing-info {
+    padding-bottom: 60px;
+}
+
+.landing-card {
+    background: linear-gradient(to bottom right, var(--verde-card), var(--verde-card-suave));
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.landing-card.shadow-sm {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.landing-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.landing-card h2,
+.landing-card h3,
+.landing-card h4 {
+    font-weight: 600;
+}
+
+.landing-card h2 {
+    color: var(--verde-principal);
+}
+
+.landing-card h3 {
+    color: var(--azul-reciclaje);
+}
+
+.landing-card h4 {
+    color: var(--verde-principal);
+}
+
+/* === LISTAS === */
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+/* === FOOTER === */
+.landing-footer {
+    background-color: var(--verde-principal);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+/* Imagen de perfil circular al centro */
+.profile-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-preview {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--verde-principal);
+    cursor: pointer;
+}
+
+/* Mapa */
+#map {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Ocultar campos condicionales */
+.hidden {
+    display: none;
+}
+.leaflet-map {
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}

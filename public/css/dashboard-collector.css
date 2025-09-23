@@ -1,0 +1,50 @@
+/* dashboard-collector.css */
+
+body {
+    background: linear-gradient(to right, #d9f2e6, #b6e2cc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: #198754;
+}
+
+.navbar a,
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar a:hover {
+    color: #d1f7e6 !important;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.btn-primary {
+    background-color: #157347;
+    border-color: #157347;
+}
+
+.btn-primary:hover {
+    background-color: #10623b;
+    border-color: #0f5a36;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #212529 !important; 
+    pointer-events: auto !important; 
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #d1f7e6 !important;
+    color: #198754 !important; 
+}

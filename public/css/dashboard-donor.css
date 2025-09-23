@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(to bottom, #d2f0db, #c9eac2, #bfe6d5);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Contenedor centrado y ancho limitado */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.donor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.donor-card:hover {
+    transform: scale(1.01);
+}
+
+/* Ícono arriba del contenido */
+.donor-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Colores personalizados para fondo de tarjeta */
+.bg-light-green {
+    background: linear-gradient(135deg, #e5fbee, #d2f9e2);
+}
+
+.bg-light-yellow {
+    background: linear-gradient(135deg, #fffbe7, #fff3c9);
+}
+
+.bg-light-pink {
+    background: linear-gradient(135deg, #ffe7ef, #ffd6e2);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 576px) {
+    .donor-card {
+        padding: 16px 20px;
+    }
+
+    .donor-card-icon {
+        font-size: 2rem;
+    }
+}
+/* Navbar más delgado y estilizado */
+.navbar {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+}
+
+.navbar-nav {
+    gap: 0.5rem;
+}
+
+.navbar .nav-link {
+    padding: 0.4rem 0.6rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Perfil: imagen más chica y alineada */
+.navbar .nav-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}

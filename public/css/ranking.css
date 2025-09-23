@@ -1,0 +1,57 @@
+/* General */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Títulos */
+h2 {
+    font-weight: 700;
+    color: #343a40;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-left: 6px solid #007bff;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #212529;
+}
+
+/* Textos */
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Colores por sección */
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+}

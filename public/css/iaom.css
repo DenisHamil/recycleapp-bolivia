@@ -1,0 +1,58 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar */
+nav.bg-dark {
+    background-color: #1e2b3c !important;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+nav h4 {
+    color: #00e676;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Contenido principal */
+.flex-grow-1 {
+    background-color: #f4f6f8;
+}
+
+/* Títulos */
+h2 {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Tarjetas del dashboard */
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card .card-title {
+    font-weight: 600;
+}
+
+.card .btn {
+    margin-top: 10px;
+}
