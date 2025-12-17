@@ -2,6 +2,12 @@
   <img src="https://laravel.com/img/logotype.min.svg" alt="Laravel" width="300">
   <h1>♻️ RecycleApp Bolivia</h1>
   <p><strong>Plataforma para impulsar el reciclaje y la economía circular en Bolivia</strong></p>
+  
+  <p>
+    <a href="http://recycleappboliviatest.infinityfreeapp.com" target="_blank">
+      🌐 <strong>Ver Demo</strong>
+    </a>
+  </p>
 </div>
 
 <div align="center">
@@ -19,6 +25,8 @@
 
 **RecycleApp Bolivia** es una plataforma desarrollada en **Laravel 10** que conecta **donadores** y **recolectores** de materiales reciclables.
 Permite gestionar donaciones, historial de recolecciones, recompensas y notificaciones, fomentando la economía circular y el reciclaje responsable.
+
+**🔗 Demo:** [recycleappboliviatest.infinityfreeapp.com](http://recycleappboliviatest.infinityfreeapp.com)
 
 **Características principales:**
 
